@@ -1,9 +1,9 @@
-# @geolonia/geojson-viewer
+# @geolonia/view-geojson
 
 A CLI tool to preview geojson.
 
 ## Usage
 
 ```shell
-cat path/to/data.geojson | npx @geolonia/geojson-viewer
+cat path/to/data.geojson | npx @geolonia/view-geojson
 ```
