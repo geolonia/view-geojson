@@ -1,6 +1,6 @@
 # @geolonia/view-geojson
 
-A CLI tool to preview geojson.
+A CLI tool to preview GeoJSONs.
 
 ## Usage
 
