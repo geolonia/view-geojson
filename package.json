@@ -1,0 +1,20 @@
+{
+  "name": "@geolonia/view-geojson",
+  "version": "0.0.0",
+  "description": "A Frontend CLI collection against geolonia services.",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^13.7.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js"
+  },
+  "dependencies": {
+    "open": "^7.0.3"
+  }
+}
