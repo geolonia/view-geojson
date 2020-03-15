@@ -1,10 +1,8 @@
 import http from "http";
 import openBrowser from "open";
-import fs from "fs";
 
 const serve = (data: string) => {
   const server = http.createServer((request, response) => {
-    console.log(request.url);
     if (request.url === "/data.geojson") {
       response.setHeader("content-type", "application/json");
       response.write(data);
