@@ -27,7 +27,7 @@ const serve = (data: string) => {
   </head>
   <body>
     <div class="geolonia" data-geojson="data.geojson"></div>
-    <script src="https://api.geolonia.com/dev/embed?geolonia-api-key=YOUR-API-KEY"></script>
+    <script src="https://cdn.geolonia.com/dev/embed?geolonia-api-key=YOUR-API-KEY"></script>
   </body>
 </html>
 
