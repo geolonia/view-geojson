@@ -20,6 +20,8 @@ const serve = (data: string) => {
       html,
       body,
       .geolonia {
+        padding: 0;
+        margin: 0;
         width: 100%;
         height: 100%;
       }
