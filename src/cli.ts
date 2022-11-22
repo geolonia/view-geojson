@@ -11,7 +11,7 @@ const onEnd = () => {
   try {
     serve(data);
   } catch (e) {
-    process.stdout.write(e.message);
+    console.error(e)
     process.exit(1);
   }
 };

@@ -1,7 +1,17 @@
 import http from "http";
 import openBrowser from "open";
 
+const port = parseInt(process.env.PORT || '8080', 10)
+const url = `http://127.0.0.1:${port}`;
+
 const serve = (data: string) => {
+  let geojson: any
+  try {
+    geojson = JSON.parse(data)
+  } catch (error) {
+    throw new Error('Invalid GeoJSON.')
+  }
+
   const server = http.createServer((request, response) => {
     if (request.url === "/data.geojson") {
       response.setHeader("content-type", "application/json");
@@ -28,8 +38,8 @@ const serve = (data: string) => {
     </style>
   </head>
   <body>
-    <div class="geolonia" data-geojson="data.geojson"></div>
-    <script src="https://cdn.geolonia.com/dev/embed?geolonia-api-key=YOUR-API-KEY"></script>
+    <div class="geolonia" data-geojson="${url}/data.geojson"></div>
+    <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
   </body>
 </html>
 
@@ -38,8 +48,8 @@ const serve = (data: string) => {
     }
   });
 
-  server.listen(8080, () => {
-    const url = `http://127.0.0.1:8080`;
+  server.listen(port, () => {
+    console.log(`Receiving: ${geojson}`)
     console.log(`Serving at ${url}...`);
     openBrowser(url);
   });
